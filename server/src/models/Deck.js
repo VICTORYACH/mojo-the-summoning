@@ -1,22 +1,19 @@
-//Import Sequelize library
-const Sequelize = require('sequelize');
-
-// Create Sequelize instance
-const sequelize = new Sequelize('database_name', 'username', 'password', {
-  host: 'localhost',
-  dialect: 'mysql'
+// Deck model
+let Deck = db.define("Deck", {
+  id: {
+    type: DataTypes.INTEGER,
+    primaryKey: true,
+    autoIncrement: true
+  },
+  xp: {
+    type: DataTypes.INTEGER,
+    allowNull: false
+  },
+  name: {
+    type: DataTypes.STRING,
+    allowNull: false
+  }
 });
-const Deck = sequelize.define('Deck', {
-    id: {
-      type: Sequelize.INTEGER,
-      primaryKey: true,
-      autoIncrement: true
-    },
-    name: {
-      type: Sequelize.STRING,
-      allowNull: false
-    }
-  });
   module.exports = {
     Deck
 }
