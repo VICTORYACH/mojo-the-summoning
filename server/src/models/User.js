@@ -1,16 +1,10 @@
-// User model
-let User = db.define("User", {
-  id: {
-    type: DataTypes.INTEGER,
-    primaryKey: true,
-    autoIncrement: true
-  },
-  xp: {
-    type: DataTypes.INTEGER,
-    allowNull: false
-  },
-  name: {
-    type: DataTypes.STRING,
+// Import Sequelize library
+const Sequelize = require('sequelize');
+
+// Define User model
+const User = db.define('User', {
+  username: {
+    type: Sequelize.STRING,
     allowNull: false
   }
 });
