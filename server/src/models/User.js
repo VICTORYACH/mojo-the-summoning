@@ -1,5 +1,5 @@
 // Import Sequelize library
-const Sequelize = require('sequelize');
+const {Sequelize,db } = require('../db/config.js');
 
 // Define User model
 const User = db.define('User', {
